@@ -10,7 +10,9 @@ console.log(num);
 //     console.log(test);
 //     console.log(test1);
 // }
+if (num % 2 === 0) {
 
+}
 if (num == 1) {
     console.log("Исключение");
 }
@@ -35,4 +37,33 @@ else {
             }
         }
     }
+}
+
+// status: string like "open" "closed" "brain fuck"
+class Order {
+    id;
+    status;
+}
+
+class OrderEugen extends Order {
+    special
+}
+
+// если статус Open то показывать сообщение статуса "The order is opened"
+
+// const statusMap = new Map();
+const statusMap = {
+    open: 'The order id opened',
+    closed: 'The order id closed',
+    "brain fuck": 'The order id brain fuck',
+};
+
+function getStatusPresentation(status) {
+    // if (status == 'opened'){
+    //     return `The order is ${status}`;
+    // } else {
+    //     return 'The order is closed'; 
+    // }
+
+    return statusMap[status];
 }
